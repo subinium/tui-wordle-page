@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUI Wordle - Beautiful Terminal Wordle Game</title>
+    <meta name="description" content="Beautiful terminal-based Wordle game with shared leaderboard, streaks, and Google login. Play daily Wordle in your terminal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section with Integrated Demo -->
+        <header class="hero">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">wordle</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-content">
+                        <div class="terminal-left">
+                            <pre class="ascii-art">╦ ╦╔═╗╦═╗╔╦╗╦  ╔═╗
+║║║║ ║╠╦╝ ║║║  ║╣
+╚╩╝╚═╝╩╚══╩╝╩═╝╚═╝</pre>
+                            <p class="tagline">Beautiful terminal-based<br>Wordle game</p>
+                            <p class="subtitle">with shared leaderboard and streaks</p>
+                            <div class="hero-cta">
+                                <code class="quick-install copyable" data-copy="pip install tui-wordle">pip install tui-wordle</code>
+                            </div>
+                        </div>
+                        <div class="terminal-right">
+                            <div class="wordle-grid">
+                                <div class="wordle-row">
+                                    <div class="tile correct">C</div>
+                                    <div class="tile correct">L</div>
+                                    <div class="tile present">A</div>
+                                    <div class="tile absent">I</div>
+                                    <div class="tile absent">M</div>
+                                </div>
+                                <div class="wordle-row">
+                                    <div class="tile correct">C</div>
+                                    <div class="tile correct">L</div>
+                                    <div class="tile correct">A</div>
+                                    <div class="tile absent">S</div>
+                                    <div class="tile present">S</div>
+                                </div>
+                                <div class="wordle-row">
+                                    <div class="tile correct">C</div>
+                                    <div class="tile correct">L</div>
+                                    <div class="tile correct">A</div>
+                                    <div class="tile correct">U</div>
+                                    <div class="tile correct">D</div>
+                                </div>
+                                <div class="wordle-row">
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                </div>
+                                <div class="wordle-row">
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                </div>
+                                <div class="wordle-row">
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                    <div class="tile empty"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Install Section -->
+        <section class="install-section">
+            <h2>Quick Install</h2>
+            <div class="install-options">
+                <div class="install-card copyable" data-copy="pip install tui-wordle">
+                    <span class="install-label">pip</span>
+                    <code class="install-cmd">pip install tui-wordle</code>
+                </div>
+                <div class="install-card recommended copyable" data-copy="uv tool install tui-wordle">
+                    <span class="install-label">uv <span class="badge">recommended</span></span>
+                    <code class="install-cmd">uv tool install tui-wordle</code>
+                </div>
+                <div class="install-card copyable" data-copy="pipx install tui-wordle">
+                    <span class="install-label">pipx</span>
+                    <code class="install-cmd">pipx install tui-wordle</code>
+                </div>
+            </div>
+            <div class="run-cmd">
+                <span>Then run:</span>
+                <code class="copyable" data-copy="wordle">wordle</code>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Daily Puzzle</h3>
+                    <p>New word every day, synced globally</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Google Login</h3>
+                    <p>One-click browser authentication</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Leaderboard</h3>
+                    <p>Compete with players worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Streaks</h3>
+                    <p>Track your daily winning streaks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Statistics</h3>
+                    <p>GitHub-style contribution graph</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Auto-save</h3>
+                    <p>Resume games anytime</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keyboard Section -->
+        <section class="keyboard-section">
+            <h2>Controls</h2>
+            <div class="keyboard-grid">
+                <div class="key-item">
+                    <kbd>A-Z</kbd>
+                    <span>Type letters</span>
+                </div>
+                <div class="key-item">
+                    <kbd>Enter</kbd>
+                    <span>Submit guess</span>
+                </div>
+                <div class="key-item">
+                    <kbd>Backspace</kbd>
+                    <span>Delete letter</span>
+                </div>
+                <div class="key-item">
+                    <kbd>F1</kbd>
+                    <span>Statistics</span>
+                </div>
+                <div class="key-item">
+                    <kbd>F2</kbd>
+                    <span>Leaderboard</span>
+                </div>
+                <div class="key-item">
+                    <kbd>F3</kbd>
+                    <span>Help</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <a href="https://github.com/subinium/tui-wordle" class="github-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                View on GitHub
+            </a>
+            <a href="https://pypi.org/project/tui-wordle/" class="pypi-btn" target="_blank" rel="noopener">
+                View on PyPI
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with <span class="heart">♥</span> using <a href="https://textual.textualize.io/" target="_blank" rel="noopener">Textual</a></p>
+            <p class="license">MIT License</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation to tiles on load
+            const tiles = document.querySelectorAll('.wordle-row .tile:not(.empty)');
+            tiles.forEach((tile, index) => {
+                tile.style.animationDelay = `${index * 0.1}s`;
+                tile.classList.add('animate');
+            });
+
+            // Clipboard copy functionality
+            const copyables = document.querySelectorAll('.copyable');
+            copyables.forEach(el => {
+                el.addEventListener('click', async () => {
+                    const text = el.dataset.copy;
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        el.classList.add('copied');
+                        setTimeout(() => el.classList.remove('copied'), 1500);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
